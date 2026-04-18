@@ -1,22 +1,26 @@
 object caperucita {
-    var peso = 60
+    var pesoPropio = 60
     var miCanasta = canasta
     method peso() {
-      peso + miCanasta.peso()
+    return pesoPropio + miCanasta.peso()
     }
 }
+
 object canasta {
     var cantidadDeManzanas = 6 
     var pesoDeManzanas = 0.2
     method peso() {
-      cantidadDeManzanas * pesoDeManzanas
+        return  cantidadDeManzanas * pesoDeManzanas
     }
-    method sacarManzana() {
+    method perdesManzana() {
         if (cantidadDeManzanas > 0){
             cantidadDeManzanas = cantidadDeManzanas -1
         }
     }
 }
 object abuela {
-    var peso = 50 
+    var peso = 50
+    method peso() {
+      return 50
+    }
 }
