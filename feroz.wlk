@@ -1,22 +1,23 @@
+import caperucita.*
+
 object feroz {
-    var peso = 10
-    var esSaludable = false
+    var pesoInicial = 10 
+
+    var peso = pesoInicial
 
     method comer(comida) {
-        peso = peso + peso.comida()
-    }
-
-    method cambioDePeso() {
-        pesoActual = comer(comida)
+        peso = peso + (comida.peso() * 0.1)
     }
 
     method estaSaludable() {
-        if(cambioDePeso <= 20){
-            esSaludable = true
-        }
+        return peso >= 20 && peso <= 150
     }
 
     method crisis() {
-        peso = 10
+        peso = pesoInicial
+    }
+
+    method correrAUnPunto() {
+        peso = peso -1 
     }
 }
